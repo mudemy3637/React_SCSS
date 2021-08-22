@@ -1,23 +1,23 @@
 import "./menu.scss";
 
-const Menu = (props) => {
+const Menu = ({ menuOpen, setMenuOpen }) => {
   return (
-    <div className="menu">
+    <div className={"menu " + (menuOpen && "active")}>
       <ul>
-        <li>
+        <li onClick={() => setMenuOpen(false)}>
           <a href="#intro">Intro</a>
         </li>
-        <li>
+        <li onClick={() => setMenuOpen(false)}>
           <a href="#portfolio">Portfolio</a>
         </li>
-        <li>
-          <a href="works">Works</a>
+        <li onClick={() => setMenuOpen(false)}>
+          <a href="#works">Works</a>
         </li>
-        <li>
-          <a href="testimonials">Testimonials</a>
+        <li onClick={() => setMenuOpen(false)}>
+          <a href="#testemonials">Testimonials</a>
         </li>
-        <li>
-          <a href="contact">Contact</a>
+        <li onClick={() => setMenuOpen(false)}>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
     </div>
